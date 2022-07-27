@@ -54,7 +54,7 @@ async function getQuotes () {
 // Tweet Quote
 
 function tweetQuote () {
-  const twitterURL = `https://twitter.com/intent/tweet?text=${quoteText.textContent}%0A${authorText.textContent}`;
+  const twitterURL = `https://twitter.com/intent/tweet?text="${quoteText.textContent}"%0A${authorText.textContent}`;
   window.open(twitterURL, '_blank');
 }
 
