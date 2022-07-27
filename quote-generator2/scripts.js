@@ -1,67 +1,32 @@
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
-const authorText = document.getElementById('author');
-const twitterBtn = document.getElementById('twitter-button');
-const newQuoteBtn = document.getElementById('new-quote');
-const loader = document.getElementById('loader');
+const quoteAuthor = document.getElementById('author');
+const twitterButton = document.getElementById('twitter-button');
+const quoteBtn = document.getElementById('quote-btn');
+// get quote from API
 
-let apiQuotes = [];
-
-// show loading animation and hide container
-function loading () {
-  loader.hidden = false;
-  quoteContainer.hidden = true;
-}
-
-// hide loading and show container
-function complete () {
-  loader.hidden = true;
-  quoteContainer.hidden = false;
-}
-
-// Show new quote
-function newQuote () {
-  loading();
-  // pick a random quote from apiQuote array
-  const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-  if (quote.text.length > 70) {
-    quoteText.classList.add('long-quote');
-  } else {
-    quoteText.classList.remove('long-quote');
-  }
-  quoteText.textContent = quote.text;
-  if (quote.author === null) {
-    authorText.textContent = 'Unknown';
-  } else {
-    authorText.textContent = quote.author;
-  }
-  complete();
-}
-
-// Get Quotes From API
-async function getQuotes () {
-  loading();
-  const apiURL = 'https://type.fit/api/quotes';
+async function getQuote () {
+  const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // proxy for cross-origin requests
+  const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
   try {
-    const response = await fetch(apiURL);
-    apiQuotes = await response.json();
-    newQuote();
+    const response = await fetch(proxyUrl + apiUrl);
+    const data = await response.json();
+    if (data.quoteText.length > 50) {
+      quoteText.classList.add('long-quote');
+    } else {
+      quoteText.classList.remove('long-quote');
+    }
+
+    quoteText.innerText = data.quoteText;
+    if (data.quoteAuthor === '') {
+      quoteAuthor.innerText = 'Unknown';
+    } else {
+    quoteAuthor.innerText = data.quoteAuthor;
+    }
   } catch (error) {
-    // Catch Error Here
+    getQuote();
   }
 }
 
-// Tweet Quote
-
-function tweetQuote () {
-  const twitterURL = `https://twitter.com/intent/tweet?text=${quoteText.textContent}%0A${authorText.textContent}`;
-  window.open(twitterURL, '_blank');
-}
-
-// event listener
-
-newQuoteBtn.addEventListener('click', getQuotes);
-twitterBtn.addEventListener('click', tweetQuote);
-
-// On load
-getQuotes();
+// on load
+getQuote();
