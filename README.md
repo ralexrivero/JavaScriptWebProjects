@@ -1,10 +1,7 @@
-# infinity scroll
+# JavaScript web projects
 
-## Description
-
-Infinite scroll displaying images from a stock photo gallery.
-
-[inifite scroll](https://ralex.me/JavaScriptWebProjects/infinity-scroll/)
+- Quote generator [Quote generator](https://ralex.me/JavaScriptWebProjects/quote-generator/)
+- Infinity scroll [infinite scroll](https://ralex.me/JavaScriptWebProjects/infinity-scroll/)
 
 ## Environment
 
