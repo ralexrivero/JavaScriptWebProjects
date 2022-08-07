@@ -2,7 +2,7 @@
 
 ## Description
 
-Infinite scroll displaying images from a stock photo gallery.
+Infinite scroll displaying images from a stock photo gallery. Add immages on the background while the user is scrolling.
 
 [inifite scroll](https://ralex.me/JavaScriptWebProjects/infinity-scroll/)
 

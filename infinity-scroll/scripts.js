@@ -6,7 +6,7 @@ let imgTotal = 0;
 let photosArray = [];
 
 // Unsplash API
-const count = 10;
+const count = 5;
 const apiKey = 'Eq7N_bjki_HpNR8C_AOGxTKgvvjNGlEjPtPfuc4LCFM';
 const orient = 'landscape';
 const collections = ''; // comma separated values (ID's)
@@ -17,7 +17,7 @@ loader.hidden = false;
 // images loaded checker
 function imageLoaded () {
   imgLoaded++;
-  if (imgLoaded < 10) {
+  if (imgLoaded < 5) {
     loader.hidden = true;
   } else if (imgLoaded === imgTotal) {
     imgReady = true;
