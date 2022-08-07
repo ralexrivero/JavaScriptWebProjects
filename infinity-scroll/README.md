@@ -13,6 +13,11 @@ Infinite scroll displaying images from a stock photo gallery.
 [![JS](https://img.shields.io/static/v1?label=&message=JavaScript&color=F7DF1E&logo=JavaScript&logoColor=F7DF1E&labelColor=2F333A)](https://www.javascript.com)<!-- JS -->
 [![Github Pages](https://img.shields.io/static/v1?label=&message=Github%20Pages&color=232F3E&logo=Github%20Pages&logoColor=222222&labelColor=F5F5F5)](https://pages.github.com/)<!-- Github Pages -->
 
+## resources
+
+- images from [unsplash](https://unsplash.com)
+- loader from [loading.io](https://loading.io)
+
 ## Author
 <!-- twitter -->
 [![Twitter](https://img.shields.io/twitter/follow/ralex_uy?style=social)](https://twitter.com/ralex_uy) <!-- linkedin --> [![Linkedin](https://img.shields.io/badge/LinkedIn-+26K-blue?style=social&logo=linkedin)](https://www.linkedin.com/in/ronald-rivero/) <!-- github --> [![Github](https://img.shields.io/github/followers/ralexrivero?style=social)](https://github.com/ralexrivero/) <!-- vagrant --> [![Vagrant](https://img.shields.io/static/v1?label=&message=Vagrant%20Profile&color=1868F2&logo=vagrant&labelColor=2F333A)](https://app.vagrantup.com/ralexrivero) <!-- docker --> [![Docker](https://img.shields.io/static/v1?label=&message=Docker%20Profile&color=2496ED&logo=Docker&labelColor=2F333A)](https://hub.docker.com/u/ralexrivero)
